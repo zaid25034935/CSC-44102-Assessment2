@@ -2,7 +2,23 @@
 # to review and improve my draft code.
 
 import random
-
+def select_difficulty():
+    """Allows the user to select a difficulty level."""
+    while True:
+        print("\nSelect Difficulty:")
+        print("1: Easy (1-50)")
+        print("2: Medium (1-100)")
+        print("3: Hard (1-200)")
+        choice = input("Enter choice (1, 2, or 3): ")
+        
+        if choice == '1':
+            return 50
+        elif choice == '2':
+            return 100
+        elif choice == '3':
+            return 200
+        else:
+            print("Invalid choice. Please enter 1, 2, or 3.")
 def guess_the_number():
     """A simple text-based 'Guess the Number' game."""
     
