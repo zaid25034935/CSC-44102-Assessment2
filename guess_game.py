@@ -19,15 +19,16 @@ def select_difficulty():
             return 200
         else:
             print("Invalid choice. Please enter 1, 2, or 3.")
-def guess_the_number():
+def guess_the_number(max_range):
     """A simple text-based 'Guess the Number' game."""
     
-    # Generate a random number between 1 and 100
-    secret_number = random.randint(1, 100)
+    # Generate a random number
+    secret_number = random.randint(1, max_range)
+
     attempts = 0
     
     print("Welcome to Guess the Number!")
-    print("I'm thinking of a number between 1 and 100.")
+    print(f"I'm thinking of a number between 1 and {max_range}.")
     
     while True:
         try:
@@ -47,4 +48,4 @@ def guess_the_number():
             print("Invalid input. Please enter a whole number.")
 
 if __name__ == "__main__":
-    guess_the_number()
+    guess_the_number(select_difficulty())
