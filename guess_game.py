@@ -48,4 +48,6 @@ def guess_the_number(max_range):
             print("Invalid input. Please enter a whole number.")
 
 if __name__ == "__main__":
-    guess_the_number(select_difficulty())
+    max_range = select_difficulty()
+    guess_the_number(max_range)
+
